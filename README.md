@@ -20,7 +20,16 @@ turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 
 
 ### Video
-| Segment | Timestamp |
+
+| Video Time | Content | Person |
+| --- | --- | --- |
+| 0:00 – 2:11 minutes | Game overview and the three stages | Gianluca |
+| 2:11 – 5:18 minutes | Gameplay demonstration and key outcomes | Kiefer |
+| 5:18 – 8:30 minutes | Class diagrams and evidence of stage changes | Stephanie |
+| 8:30 – 12:25 minutes | Sequence diagram (selected: Stage 3) | Patrick |
+| 12:25 – 14:41 minutes | Individual contributions and key learning | Gianluca |
+
+| Demo Segments | Timestamp |
 |---|---|
 | The game launching from the submitted project | 2:27 |
 | Meaningful manager choices, including a decision where staff are constrained | 3:16, 4:04 |
@@ -29,6 +38,9 @@ turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 | A Stage 3 feature | 3:16, 4:44 |
 | One victory and one defeat (separate reproducible runs, or an accelerated replay) | 5:19 |
 | The stage tag comparisons and the diagrams | 5.48, 7.01 |
+
+
+
 
 
 
