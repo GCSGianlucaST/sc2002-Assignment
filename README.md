@@ -16,8 +16,21 @@ turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 |---|---|
 | Repository | https://github.com/GCSGianlucaST/sc2002-Assignment |
 | Stage snapshots | [`stage-1`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-1) · [`stage-2`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-2) · [`stage-3`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-3) (zips on the [tags page](https://github.com/GCSGianlucaST/sc2002-Assignment/tags)) |
-| Video timestamps | _TODO: fill in after recording (section 6.2 of the brief)_ |
 | AI histories | [`Gianluca`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Gianluca-AI-Chat/Gianluca_AI_chat.md) · [`Kiefer`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Kiefer-AI-Chat/SC2002-ai-history) · [`Patrick`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Patrick-AI-Chat/ai-history) · [`Stephanie`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Stephanie-AI-Chat/chat-01.md)|
+
+
+### Video
+| Segment | Timestamp |
+|---|---|
+| The game launching from the submitted project | 2:27 |
+| Meaningful manager choices, including a decision where staff are constrained | 3:16, 4:04 |
+| A dish going READY -> SERVED -> payment | 1:05-3:49 |
+| A VIP or Critic behaviour | 3:29, 3:49, 4:44 |
+| A Stage 3 feature | 3:16, 4:44 |
+| One victory and one defeat (separate reproducible runs, or an accelerated replay) | 5:19 |
+| The stage tag comparisons and the diagrams | 5.48, 7.01 |
+
+
 
 ## Build and run
 
