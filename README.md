@@ -17,7 +17,7 @@ turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 | Repository | https://github.com/GCSGianlucaST/sc2002-Assignment |
 | Stage snapshots | [`stage-1`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-1) · [`stage-2`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-2) · [`stage-3`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-3) (zips on the [tags page](https://github.com/GCSGianlucaST/sc2002-Assignment/tags)) |
 | Video timestamps | _TODO: fill in after recording (section 6.2 of the brief)_ |
-| AI histories | [`Gianluca`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Gianluca-AI-Chat/Gianluca_AI_chat.md) · [`Kiefer`]((https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Kiefer-AI-Chat)) · [`Patrick`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Patrick-AI-Chat/ai-history) · [`Stephanie`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Stephanie-AI-Chat/chat-01.md)|
+| AI histories | [`Gianluca`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Gianluca-AI-Chat/Gianluca_AI_chat.md) · [`Kiefer`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Kiefer-AI-Chat) · [`Patrick`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/Patrick-AI-Chat/ai-history) · [`Stephanie`](https://github.com/GCSGianlucaST/sc2002-Assignment/blob/Stephanie-AI-Chat/chat-01.md)|
 
 ## Build and run
 
