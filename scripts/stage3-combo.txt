@@ -1,0 +1,32 @@
+n
+wait
+wait
+wait
+n
+wait
+wait
+wait
+n
+wait
+wait
+wait
+n
+wait
+wait
+wait
+n
+seat 1
+order 1
+cook 1
+n
+wait
+wait
+cook 1
+n
+wait
+wait
+cook 1
+n
+wait
+serve 1
+wait

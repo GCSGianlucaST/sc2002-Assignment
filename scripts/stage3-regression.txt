@@ -1,0 +1,73 @@
+n
+wait
+seat 1
+wait
+n
+wait
+order 1
+cook 1
+n
+wait
+serve 1
+wait
+n
+wait
+seat 2
+wait
+n
+wait
+order 2
+cook 2
+n
+wait
+serve 2
+wait
+n
+wait
+seat 3
+wait
+n
+wait
+order 3
+cook 3
+n
+wait
+serve 3
+wait
+cook 3
+n
+wait
+serve 3
+wait
+n
+wait
+seat 4
+wait
+n
+wait
+order 4
+cook 4
+n
+wait
+seat 5
+cook 4
+n
+wait
+serve 4
+wait
+n
+wait
+order 5
+cook 5
+n
+wait
+serve 5
+wait
+n
+wait
+seat 6
+wait
+n
+wait
+order 6
+cook 6

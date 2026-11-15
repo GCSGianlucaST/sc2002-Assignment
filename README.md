@@ -12,6 +12,13 @@ customers, Salad / Burger / Pasta, Waiter, Chef, Cashier, two tables, the full
 turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 **Critic** customers) and Stage 3 (**Host**, **ComboMeal**, **Happy Hour**).
 
+| Item | Link |
+|---|---|
+| Repository | https://github.com/GCSGianlucaST/sc2002-Assignment |
+| Stage snapshots | [`stage-1`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-1) · [`stage-2`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-2) · [`stage-3`](https://github.com/GCSGianlucaST/sc2002-Assignment/tree/stage-3) (zips on the [tags page](https://github.com/GCSGianlucaST/sc2002-Assignment/tags)) |
+| Video timestamps | _TODO: fill in after recording (section 6.2 of the brief)_ |
+| AI histories | _TODO: one link per member branch, e.g. `ai-history/stage-1/chat-01.md`_ |
+
 ## Build and run
 
 Needs Java 17 or later. No other libraries.
