@@ -1,6 +1,6 @@
 # Chat export: Restaurant Rush Stage 1 skeleton code
 
-*Rebuilt by Claude from the conversation on 15 Nov 2026 (Asia/Singapore). Tool calls are summarised, not shown in full.*
+*Rebuilt by Claude from the conversation on 7 Nov 2026 (Asia/Singapore). Tool calls are summarised, not shown in full.*
 
 ---
 
@@ -56,11 +56,3 @@ To compile: `javac -d out src/restaurantrush/*.java`
 | Staff | Staff (abstract), Assignable (interface), Waiter, Chef, Cashier, Task, TaskType (enum), InvalidActionException |
 
 ---
-
-## User · 20:25
-
-> can you export this chat as a json or md or whatever file
-
-## Claude
-
-Sent this file.

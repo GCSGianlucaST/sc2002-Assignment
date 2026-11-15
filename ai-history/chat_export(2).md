@@ -4,7 +4,7 @@ Exported 2026-11-15 (Asia/Singapore)
 
 ---
 
-## User (14:05)
+## User (12:05)
 
 [attached: restaurantrush.zip] can you generate some test cases/scripts to test our final code for java project? it should be able to simulate victory, defeat, and any other scenario that might break the code.
 
@@ -57,7 +57,7 @@ Every game runs with a 10-second time limit, so a hang shows up as a failed test
 
 ## User (20:24)
 
-can you export this chat as a json or md or whatever file
+can you export this chat as a md file
 
 ## Assistant
 
