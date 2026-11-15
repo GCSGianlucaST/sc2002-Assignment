@@ -45,7 +45,7 @@ public class ConsoleUI implements GameUI {
     @Override
     public void showTurnStart(int turn, int maxTurns, Restaurant r) {
         if (turn == 1) {
-            out.println("RESTAURANT RUSH  |  Stage 1");
+            out.println("RESTAURANT RUSH  |  Stage 2");
             out.println("Goal after turn " + maxTurns + ": at least 4 paid customers, revenue at least $45.00,");
             out.println("and average satisfaction of paid customers at least 60.");
             out.println("Commands: seat N | order N | serve N | cook N | wait   (N = customer or order number)");

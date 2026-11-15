@@ -6,8 +6,8 @@ import java.util.Optional;
  * A customer and their life cycle:
  * WAITING -> SEATED -> ORDERED -> EATING -> READY_TO_PAY -> PAID, or LEFT.
  *
- * Polymorphism: chooseMenuItem(), getSatisfactionLossPerTurn() and
- * getTypeName() are abstract, and calculateBillCents() can be overridden.
+ * Polymorphism: getSatisfactionLossPerTurn() and getTypeName() are abstract,
+ * and chooseMenuItem() and calculateBillCents() can be overridden.
  * The turn rules call these on any Customer without checking its type, so a
  * new kind of customer is a new subclass and no rule code changes (OCP).
  */
@@ -33,8 +33,17 @@ public abstract class Customer {
 
     // ---------------------------------------------------------- hooks for subclasses
 
-    /** The customer, not the manager, chooses the food (brief section 2.2). */
-    public abstract MenuItem chooseMenuItem(Menu menu);
+    /**
+     * The customer, not the manager, chooses the food (brief section 2.2).
+     * Default rule (documented): customer #n orders menu item (n - 1) mod menu
+     * size, so with [Salad, Burger, Pasta] the six arrivals would order
+     * Salad, Burger, Pasta, Salad, Burger, Pasta. Moved up from
+     * RegularCustomer in Stage 2 so VIPs share it instead of copying it.
+     */
+    public MenuItem chooseMenuItem(Menu menu) {
+        int n = menu.size();
+        return menu.getItem((id - 1) % n);
+    }
 
     /** Satisfaction lost for each turn spent waiting for service. */
     public abstract int getSatisfactionLossPerTurn();

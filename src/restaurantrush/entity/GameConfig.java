@@ -26,7 +26,11 @@ public class GameConfig {
         this.objective = objective;
     }
 
-    /** 18 turns, 2 tables, 6 Regular arrivals, 3 menu items, targets 4 paid / $45 / 60. */
+    /**
+     * 18 turns, 2 tables, 3 menu items, targets 4 paid / $45 / 60, and six
+     * arrivals: two of the Regulars are replaced by a VIP (turn 4) and a
+     * Critic (turn 10), as the brief allows for Stage 2.
+     */
     public static GameConfig baseSetting() {
         Menu menu = new Menu(List.of(
                 new MenuItem("Salad", 900, 1),
@@ -34,9 +38,9 @@ public class GameConfig {
                 new MenuItem("Pasta", 1800, 2)));
         ArrivalSchedule schedule = new ArrivalSchedule()
                 .addArrival(1, RegularCustomer::new)
-                .addArrival(4, RegularCustomer::new)
+                .addArrival(4, VIPCustomer::new)
                 .addArrival(7, RegularCustomer::new)
-                .addArrival(10, RegularCustomer::new)
+                .addArrival(10, CriticCustomer::new)
                 .addArrival(13, RegularCustomer::new)
                 .addArrival(16, RegularCustomer::new);
         Objective objective = new Objective(4, 4500, 60.0);

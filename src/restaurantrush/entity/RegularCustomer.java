@@ -1,10 +1,8 @@
 package restaurantrush.entity;
 
 /**
- * The Stage 1 customer.
- * Food rule (documented): customer #n orders menu item (n - 1) mod menu size,
- * so with [Salad, Burger, Pasta] the six arrivals order
- * Salad, Burger, Pasta, Salad, Burger, Pasta.
+ * The standard customer: loses 8 satisfaction per waiting turn, pays full
+ * price and uses the default food rule in {@link Customer#chooseMenuItem}.
  */
 public class RegularCustomer extends Customer {
 
@@ -12,12 +10,6 @@ public class RegularCustomer extends Customer {
 
     public RegularCustomer(int id, int arrivalTurn) {
         super(id, arrivalTurn);
-    }
-
-    @Override
-    public MenuItem chooseMenuItem(Menu menu) {
-        int n = menu.size();
-        return menu.getItem((getId() - 1) % n);
     }
 
     @Override
