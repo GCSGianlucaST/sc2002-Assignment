@@ -1,0 +1,433 @@
+RESTAURANT RUSH  |  Stage 3
+Goal after turn 18: at least 4 paid customers, revenue at least $45.00,
+and average satisfaction of paid customers at least 60.
+Commands: seat N | order N | serve N | cook N | wait   (N = customer or order number)
+Each turn: Happy Hour y/n (while unused), then Host, Waiter, Chef.
+
+==================== TURN 1 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #1 Regular sat 100 WAITING
+Tables:
+  Table 1: free
+  Table 2: free
+Staff tasks available:
+  Host:   seat 1 | wait
+  Waiter: seat 1 | wait
+  Chef:   wait
+  - Customer #1 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 1 | wait
+Host> seat 1
+  - Host seats Customer #1 at table 1.
+  Waiter options: order 1 | wait
+Waiter> order 1
+  - Customer #1 (Regular) orders Salad: bill $9.00, 1 preparation unit(s).
+  Chef options: cook 1 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 1: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 1/18
+
+==================== TURN 2 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 92 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: free
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 2: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 2/18
+
+==================== TURN 3 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 84 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: free
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 3: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 3/18
+
+==================== TURN 4 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #2 VIP sat 100 WAITING
+Tables:
+  Table 1: #1 Regular sat 76 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: free
+Staff tasks available:
+  Host:   seat 2 | wait
+  Waiter: seat 2 | wait
+  Chef:   cook 1 | wait
+  - Customer #2 (VIP) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 2 | wait
+Host> seat 2
+  - Host seats Customer #2 at table 2.
+  Waiter options: order 2 | wait
+Waiter> order 2
+  - Customer #2 (VIP) orders Burger: bill $13.50, 1 preparation unit(s).
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 4: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 4/18
+
+==================== TURN 5 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 68 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 95 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 5: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 5/18
+
+==================== TURN 6 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 60 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 90 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 6: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 6/18
+
+==================== TURN 7 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 100 WAITING
+Tables:
+  Table 1: #1 Regular sat 52 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 85 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+  - Customer #3 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 7: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 7/18
+
+==================== TURN 8 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 92 WAITING
+Tables:
+  Table 1: #1 Regular sat 44 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 80 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 8: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 8/18
+
+==================== TURN 9 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 84 WAITING
+Tables:
+  Table 1: #1 Regular sat 36 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 75 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 9: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 9/18
+
+==================== TURN 10 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 76 WAITING, #4 Critic sat 100 WAITING
+Tables:
+  Table 1: #1 Regular sat 28 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 70 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+  - Customer #4 (Critic) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 10: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 10/18
+
+==================== TURN 11 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 68 WAITING, #4 Critic sat 88 WAITING
+Tables:
+  Table 1: #1 Regular sat 20 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 65 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 11: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 11/18
+
+==================== TURN 12 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 60 WAITING, #4 Critic sat 76 WAITING
+Tables:
+  Table 1: #1 Regular sat 12 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 60 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 12: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 12/18
+
+==================== TURN 13 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 52 WAITING, #4 Critic sat 64 WAITING, #5 Regular sat 100 WAITING
+Tables:
+  Table 1: #1 Regular sat 4 ORDERED | order #1 Salad PLACED 0/1 $9.00
+  Table 2: #2 VIP sat 55 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 1 | cook 2 | wait
+  - Customer #5 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 1 | cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #1 reached satisfaction 0 and left without paying: order #1 CANCELLED, table 1 freed.
+--- End of turn 13: served 0, unhappy departures 1, revenue $0.00, avg satisfaction N/A, turns used 13/18
+
+==================== TURN 14 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 1
+Happy Hour: available
+Waiting queue: #3 Regular sat 44 WAITING, #4 Critic sat 52 WAITING, #5 Regular sat 92 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 50 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | seat 4 | seat 5 | wait
+  Waiter: seat 3 | seat 4 | seat 5 | wait
+  Chef:   cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | seat 4 | seat 5 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | seat 4 | seat 5 | wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 14: served 0, unhappy departures 1, revenue $0.00, avg satisfaction N/A, turns used 14/18
+
+==================== TURN 15 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 1
+Happy Hour: available
+Waiting queue: #3 Regular sat 36 WAITING, #4 Critic sat 40 WAITING, #5 Regular sat 84 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 45 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | seat 4 | seat 5 | wait
+  Waiter: seat 3 | seat 4 | seat 5 | wait
+  Chef:   cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | seat 4 | seat 5 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | seat 4 | seat 5 | wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 15: served 0, unhappy departures 1, revenue $0.00, avg satisfaction N/A, turns used 15/18
+
+==================== TURN 16 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 1
+Happy Hour: available
+Waiting queue: #3 Regular sat 28 WAITING, #4 Critic sat 28 WAITING, #5 Regular sat 76 WAITING, #6 Regular sat 100 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 40 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Waiter: seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Chef:   cook 2 | wait
+  - Customer #6 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 16: served 0, unhappy departures 1, revenue $0.00, avg satisfaction N/A, turns used 16/18
+
+==================== TURN 17 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 1
+Happy Hour: available
+Waiting queue: #3 Regular sat 20 WAITING, #4 Critic sat 16 WAITING, #5 Regular sat 68 WAITING, #6 Regular sat 92 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 35 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Waiter: seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Chef:   cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 17: served 0, unhappy departures 1, revenue $0.00, avg satisfaction N/A, turns used 17/18
+
+==================== TURN 18 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 1
+Happy Hour: available
+Waiting queue: #3 Regular sat 12 WAITING, #4 Critic sat 4 WAITING, #5 Regular sat 60 WAITING, #6 Regular sat 84 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 30 ORDERED | order #2 Burger PLACED 0/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Waiter: seat 3 | seat 4 | seat 5 | seat 6 | wait
+  Chef:   cook 2 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | seat 4 | seat 5 | seat 6 | wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 2 | wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #4 reached satisfaction 0 and left without paying.
+--- End of turn 18: served 0, unhappy departures 2, revenue $0.00, avg satisfaction N/A, turns used 18/18
+
+==================== RESULT: DEFEAT ====================
+Paid customers:        0 (target 4)
+Revenue:               $0.00 (target $45.00)
+Average satisfaction:  N/A (target 60) - nobody paid
+Served: 0 | Unhappy departures: 2

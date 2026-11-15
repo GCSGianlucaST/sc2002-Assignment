@@ -18,6 +18,9 @@ public interface GameUI {
 
     void showTurnStart(int turn, int maxTurns, Restaurant r);
 
+    /** Asked at the start of a turn while Happy Hour is still available. */
+    boolean askHappyHour(int turn);
+
     Task askTask(Assignable staff, List<Task> options);
 
     void showMessage(String msg);

@@ -27,15 +27,17 @@ public class GameConfig {
     }
 
     /**
-     * 18 turns, 2 tables, 3 menu items, targets 4 paid / $45 / 60, and six
-     * arrivals: two of the Regulars are replaced by a VIP (turn 4) and a
-     * Critic (turn 10), as the brief allows for Stage 2.
+     * 18 turns, 2 tables, 3 menu items plus 2 combos, targets 4 paid / $45 / 60,
+     * and six arrivals: two of the Regulars are replaced by a VIP (turn 4) and
+     * a Critic (turn 10), as the brief allows for Stage 2.
      */
     public static GameConfig baseSetting() {
-        Menu menu = new Menu(List.of(
-                new MenuItem("Salad", 900, 1),
-                new MenuItem("Burger", 1500, 1),
-                new MenuItem("Pasta", 1800, 2)));
+        MenuItem salad = new MenuItem("Salad", 900, 1);
+        MenuItem burger = new MenuItem("Burger", 1500, 1);
+        MenuItem pasta = new MenuItem("Pasta", 1800, 2);
+        Menu menu = new Menu(List.of(salad, burger, pasta),
+                List.of(new ComboMeal(salad, pasta),     // $24.30, 3 units
+                        new ComboMeal(salad, burger)));  // $21.60, 2 units
         ArrivalSchedule schedule = new ArrivalSchedule()
                 .addArrival(1, RegularCustomer::new)
                 .addArrival(4, VIPCustomer::new)

@@ -7,13 +7,15 @@ import java.util.Optional;
  * WAITING -> SEATED -> ORDERED -> EATING -> READY_TO_PAY -> PAID, or LEFT.
  *
  * Polymorphism: getSatisfactionLossPerTurn() and getTypeName() are abstract,
- * and chooseMenuItem() and calculateBillCents() can be overridden.
+ * and preferredMenuItem() and calculateBillCents() can be overridden.
  * The turn rules call these on any Customer without checking its type, so a
  * new kind of customer is a new subclass and no rule code changes (OCP).
  */
 public abstract class Customer {
 
     public static final int MAX_SATISFACTION = 100;
+    /** Below this satisfaction when ordering, a customer upgrades to a combo. */
+    public static final int HUNGRY_BELOW = 70;
 
     private final int id;
     private final int arrivalTurn;
@@ -31,16 +33,33 @@ public abstract class Customer {
         this.status = CustomerStatus.WAITING;
     }
 
-    // ---------------------------------------------------------- hooks for subclasses
+    // ---------------------------------------------------------- behaviour subclasses provide or override
 
     /**
      * The customer, not the manager, chooses the food (brief section 2.2).
-     * Default rule (documented): customer #n orders menu item (n - 1) mod menu
-     * size, so with [Salad, Burger, Pasta] the six arrivals would order
-     * Salad, Burger, Pasta, Salad, Burger, Pasta. Moved up from
-     * RegularCustomer in Stage 2 so VIPs share it instead of copying it.
+     * Final, so every customer type follows this documented rule: the customer wants their
+     * {@link #preferredMenuItem}; but if their satisfaction has dropped below
+     * {@value #HUNGRY_BELOW} by the time the order is taken, they are very
+     * hungry and order the first combo that contains that item instead.
      */
-    public MenuItem chooseMenuItem(Menu menu) {
+    public final MenuItem chooseMenuItem(Menu menu) {
+        MenuItem preferred = preferredMenuItem(menu);
+        if (satisfaction < HUNGRY_BELOW) {
+            Optional<ComboMeal> combo = menu.findComboContaining(preferred);
+            if (combo.isPresent()) {
+                return combo.get();
+            }
+        }
+        return preferred;
+    }
+
+    /**
+     * Default rule (documented): customer #n wants menu item (n - 1) mod menu
+     * size, so with [Salad, Burger, Pasta] the six arrivals would want
+     * Salad, Burger, Pasta, Salad, Burger, Pasta. Subclasses with a distinct
+     * preference override this.
+     */
+    protected MenuItem preferredMenuItem(Menu menu) {
         int n = menu.size();
         return menu.getItem((id - 1) % n);
     }
@@ -68,6 +87,11 @@ public abstract class Customer {
         return status == CustomerStatus.WAITING
                 || status == CustomerStatus.SEATED
                 || status == CustomerStatus.ORDERED;
+    }
+
+    /** Happy Hour recovery; never above the maximum. */
+    public void recoverSatisfaction(int amount) {
+        satisfaction = Math.min(MAX_SATISFACTION, satisfaction + amount);
     }
 
     public boolean hasRunOutOfPatience() {

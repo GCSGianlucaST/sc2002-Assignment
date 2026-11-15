@@ -58,6 +58,18 @@ public class TurnMgr {
         return events;
     }
 
+    /** Start of an active Happy Hour turn: customers still awaiting service recover. */
+    public List<String> processHappyHour() {
+        List<String> events = new ArrayList<>();
+        List<Customer> everyone = new ArrayList<>(restaurant.getWaitingQueue().getCustomers());
+        everyone.addAll(restaurant.getSeatedCustomers());
+        for (Customer c : restaurant.getHappyHour().recoverWaiting(everyone)) {
+            events.add("Happy Hour: Customer #" + c.getId() + " recovers to satisfaction "
+                    + c.getSatisfaction() + ".");
+        }
+        return events;
+    }
+
     /** Step 5: customers still awaiting service lose satisfaction; at 0 they leave. */
     public List<String> processWaiting() {
         List<String> events = new ArrayList<>();

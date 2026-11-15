@@ -1,0 +1,444 @@
+RESTAURANT RUSH  |  Stage 3
+Goal after turn 18: at least 4 paid customers, revenue at least $45.00,
+and average satisfaction of paid customers at least 60.
+Commands: seat N | order N | serve N | cook N | wait   (N = customer or order number)
+Each turn: Happy Hour y/n (while unused), then Host, Waiter, Chef.
+
+==================== TURN 1 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #1 Regular sat 100 WAITING
+Tables:
+  Table 1: free
+  Table 2: free
+Staff tasks available:
+  Host:   seat 1 | wait
+  Waiter: seat 1 | wait
+  Chef:   wait
+  - Customer #1 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 1 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 1 | wait
+Waiter> seat 1
+  - Waiter seats Customer #1 at table 1.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 1: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 1/18
+
+==================== TURN 2 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 92 SEATED
+  Table 2: free
+Staff tasks available:
+  Host:   wait
+  Waiter: order 1 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 1 | wait
+Waiter> order 1
+  - Customer #1 (Regular) orders Salad: bill $9.00, 1 preparation unit(s).
+  Chef options: cook 1 | wait
+Chef> cook 1
+  - Chef works on order #1 (Salad): 1/1 units, READY.
+--- End of turn 2: served 0, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 2/18
+
+==================== TURN 3 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 0 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 84 ORDERED | order #1 Salad READY 1/1 $9.00
+  Table 2: free
+Staff tasks available:
+  Host:   wait
+  Waiter: serve 1 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: serve 1 | wait
+Waiter> serve 1
+  - Waiter serves Salad to Customer #1.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 3: served 1, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 3/18
+
+==================== TURN 4 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 1 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #2 VIP sat 100 WAITING
+Tables:
+  Table 1: #1 Regular sat 84 EATING | order #1 Salad SERVED 1/1 $9.00
+  Table 2: free
+Staff tasks available:
+  Host:   seat 2 | wait
+  Waiter: seat 2 | wait
+  Chef:   wait
+  - Customer #2 (VIP) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 2 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 2 | wait
+Waiter> seat 2
+  - Waiter seats Customer #2 at table 2.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #1 finished eating and is READY_TO_PAY.
+--- End of turn 4: served 1, unhappy departures 0, revenue $0.00, avg satisfaction N/A, turns used 4/18
+
+==================== TURN 5 / 18 ====================
+Revenue $0.00 | Avg satisfaction (paid) N/A | Paid 0 | Served 1 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #1 Regular sat 84 READY_TO_PAY | order #1 Salad SERVED 1/1 $9.00
+  Table 2: #2 VIP sat 95 SEATED
+Staff tasks available:
+  Host:   wait
+  Waiter: order 2 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 2 | wait
+Waiter> order 2
+  - Customer #2 (VIP) orders Burger: bill $13.50, 1 preparation unit(s).
+  Chef options: cook 2 | wait
+Chef> cook 2
+  - Chef works on order #2 (Burger): 1/1 units, READY.
+  - Cashier collects $9.00 from Customer #1 (satisfaction 84 recorded). Table 1 is free.
+--- End of turn 5: served 1, unhappy departures 0, revenue $9.00, avg satisfaction 84.0, turns used 5/18
+
+==================== TURN 6 / 18 ====================
+Revenue $9.00 | Avg satisfaction (paid) 84.0 | Paid 1 | Served 1 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 90 ORDERED | order #2 Burger READY 1/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: serve 2 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: serve 2 | wait
+Waiter> serve 2
+  - Waiter serves Burger to Customer #2.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 6: served 2, unhappy departures 0, revenue $9.00, avg satisfaction 84.0, turns used 6/18
+
+==================== TURN 7 / 18 ====================
+Revenue $9.00 | Avg satisfaction (paid) 84.0 | Paid 1 | Served 2 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #3 Regular sat 100 WAITING
+Tables:
+  Table 1: free
+  Table 2: #2 VIP sat 90 EATING | order #2 Burger SERVED 1/1 $13.50
+Staff tasks available:
+  Host:   seat 3 | wait
+  Waiter: seat 3 | wait
+  Chef:   wait
+  - Customer #3 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 3 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 3 | wait
+Waiter> seat 3
+  - Waiter seats Customer #3 at table 1.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #2 finished eating and is READY_TO_PAY.
+--- End of turn 7: served 2, unhappy departures 0, revenue $9.00, avg satisfaction 84.0, turns used 7/18
+
+==================== TURN 8 / 18 ====================
+Revenue $9.00 | Avg satisfaction (paid) 84.0 | Paid 1 | Served 2 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #3 Regular sat 92 SEATED
+  Table 2: #2 VIP sat 90 READY_TO_PAY | order #2 Burger SERVED 1/1 $13.50
+Staff tasks available:
+  Host:   wait
+  Waiter: order 3 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 3 | wait
+Waiter> order 3
+  - Customer #3 (Regular) orders Pasta: bill $18.00, 2 preparation unit(s).
+  Chef options: cook 3 | wait
+Chef> cook 3
+  - Chef works on order #3 (Pasta): 1/2 units, PREPARING.
+  - Cashier collects $13.50 from Customer #2 (satisfaction 90 recorded). Table 2 is free.
+--- End of turn 8: served 2, unhappy departures 0, revenue $22.50, avg satisfaction 87.0, turns used 8/18
+
+==================== TURN 9 / 18 ====================
+Revenue $22.50 | Avg satisfaction (paid) 87.0 | Paid 2 | Served 2 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #3 Regular sat 84 ORDERED | order #3 Pasta PREPARING 1/2 $18.00
+  Table 2: free
+Staff tasks available:
+  Host:   wait
+  Waiter: wait
+  Chef:   cook 3 | wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: wait
+Waiter> serve 3
+  ! Not allowed: Order #3 is not READY (1/2 units). A dish finished this turn can be served next turn. Choose again.
+  Waiter options: wait
+Waiter> wait
+  - Waiter waits this turn.
+  Chef options: cook 3 | wait
+Chef> cook 3
+  - Chef works on order #3 (Pasta): 2/2 units, READY.
+--- End of turn 9: served 2, unhappy departures 0, revenue $22.50, avg satisfaction 87.0, turns used 9/18
+
+==================== TURN 10 / 18 ====================
+Revenue $22.50 | Avg satisfaction (paid) 87.0 | Paid 2 | Served 2 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #4 Critic sat 100 WAITING
+Tables:
+  Table 1: #3 Regular sat 76 ORDERED | order #3 Pasta READY 2/2 $18.00
+  Table 2: free
+Staff tasks available:
+  Host:   seat 4 | wait
+  Waiter: seat 4 | serve 3 | wait
+  Chef:   wait
+  - Customer #4 (Critic) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 4 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 4 | serve 3 | wait
+Waiter> serve 3
+  - Waiter serves Pasta to Customer #3.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 10: served 3, unhappy departures 0, revenue $22.50, avg satisfaction 87.0, turns used 10/18
+
+==================== TURN 11 / 18 ====================
+Revenue $22.50 | Avg satisfaction (paid) 87.0 | Paid 2 | Served 3 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #4 Critic sat 88 WAITING
+Tables:
+  Table 1: #3 Regular sat 76 EATING | order #3 Pasta SERVED 2/2 $18.00
+  Table 2: free
+Staff tasks available:
+  Host:   seat 4 | wait
+  Waiter: seat 4 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 4 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 4 | wait
+Waiter> seat 4
+  - Waiter seats Customer #4 at table 2.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #3 finished eating and is READY_TO_PAY.
+--- End of turn 11: served 3, unhappy departures 0, revenue $22.50, avg satisfaction 87.0, turns used 11/18
+
+==================== TURN 12 / 18 ====================
+Revenue $22.50 | Avg satisfaction (paid) 87.0 | Paid 2 | Served 3 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #3 Regular sat 76 READY_TO_PAY | order #3 Pasta SERVED 2/2 $18.00
+  Table 2: #4 Critic sat 76 SEATED
+Staff tasks available:
+  Host:   wait
+  Waiter: order 4 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 4 | wait
+Waiter> order 4
+  - Customer #4 (Critic) orders Pasta: bill $18.00, 2 preparation unit(s).
+  Chef options: cook 4 | wait
+Chef> cook 4
+  - Chef works on order #4 (Pasta): 1/2 units, PREPARING.
+  - Cashier collects $18.00 from Customer #3 (satisfaction 76 recorded). Table 1 is free.
+--- End of turn 12: served 3, unhappy departures 0, revenue $40.50, avg satisfaction 83.3, turns used 12/18
+
+==================== TURN 13 / 18 ====================
+Revenue $40.50 | Avg satisfaction (paid) 83.3 | Paid 3 | Served 3 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #5 Regular sat 100 WAITING
+Tables:
+  Table 1: free
+  Table 2: #4 Critic sat 64 ORDERED | order #4 Pasta PREPARING 1/2 $18.00
+Staff tasks available:
+  Host:   seat 5 | wait
+  Waiter: seat 5 | wait
+  Chef:   cook 4 | wait
+  - Customer #5 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 5 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 5 | wait
+Waiter> seat 5
+  - Waiter seats Customer #5 at table 1.
+  Chef options: cook 4 | wait
+Chef> cook 4
+  - Chef works on order #4 (Pasta): 2/2 units, READY.
+--- End of turn 13: served 3, unhappy departures 0, revenue $40.50, avg satisfaction 83.3, turns used 13/18
+
+==================== TURN 14 / 18 ====================
+Revenue $40.50 | Avg satisfaction (paid) 83.3 | Paid 3 | Served 3 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #5 Regular sat 92 SEATED
+  Table 2: #4 Critic sat 52 ORDERED | order #4 Pasta READY 2/2 $18.00
+Staff tasks available:
+  Host:   wait
+  Waiter: order 5 | serve 4 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 5 | serve 4 | wait
+Waiter> serve 4
+  - Waiter serves Pasta to Customer #4.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+--- End of turn 14: served 4, unhappy departures 0, revenue $40.50, avg satisfaction 83.3, turns used 14/18
+
+==================== TURN 15 / 18 ====================
+Revenue $40.50 | Avg satisfaction (paid) 83.3 | Paid 3 | Served 4 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #5 Regular sat 84 SEATED
+  Table 2: #4 Critic sat 52 EATING | order #4 Pasta SERVED 2/2 $18.00
+Staff tasks available:
+  Host:   wait
+  Waiter: order 5 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 5 | wait
+Waiter> order 5
+  - Customer #5 (Regular) orders Burger: bill $15.00, 1 preparation unit(s).
+  Chef options: cook 5 | wait
+Chef> cook 5
+  - Chef works on order #5 (Burger): 1/1 units, READY.
+  - Customer #4 finished eating and is READY_TO_PAY.
+--- End of turn 15: served 4, unhappy departures 0, revenue $40.50, avg satisfaction 83.3, turns used 15/18
+
+==================== TURN 16 / 18 ====================
+Revenue $40.50 | Avg satisfaction (paid) 83.3 | Paid 3 | Served 4 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #6 Regular sat 100 WAITING
+Tables:
+  Table 1: #5 Regular sat 76 ORDERED | order #5 Burger READY 1/1 $15.00
+  Table 2: #4 Critic sat 52 READY_TO_PAY | order #4 Pasta SERVED 2/2 $18.00
+Staff tasks available:
+  Host:   wait
+  Waiter: serve 5 | wait
+  Chef:   wait
+  - Customer #6 (Regular) arrives and joins the waiting queue.
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: serve 5 | wait
+Waiter> serve 5
+  - Waiter serves Burger to Customer #5.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+  - Cashier collects $18.00 from Customer #4 (satisfaction 52 recorded). Table 2 is free.
+--- End of turn 16: served 5, unhappy departures 0, revenue $58.50, avg satisfaction 75.5, turns used 16/18
+
+==================== TURN 17 / 18 ====================
+Revenue $58.50 | Avg satisfaction (paid) 75.5 | Paid 4 | Served 5 | Left unhappy 0
+Happy Hour: available
+Waiting queue: #6 Regular sat 92 WAITING
+Tables:
+  Table 1: #5 Regular sat 76 EATING | order #5 Burger SERVED 1/1 $15.00
+  Table 2: free
+Staff tasks available:
+  Host:   seat 6 | wait
+  Waiter: seat 6 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: seat 6 | wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: seat 6 | wait
+Waiter> seat 6
+  - Waiter seats Customer #6 at table 2.
+  Chef options: wait
+Chef> wait
+  - Chef waits this turn.
+  - Customer #5 finished eating and is READY_TO_PAY.
+--- End of turn 17: served 5, unhappy departures 0, revenue $58.50, avg satisfaction 75.5, turns used 17/18
+
+==================== TURN 18 / 18 ====================
+Revenue $58.50 | Avg satisfaction (paid) 75.5 | Paid 4 | Served 5 | Left unhappy 0
+Happy Hour: available
+Waiting queue: (empty)
+Tables:
+  Table 1: #5 Regular sat 76 READY_TO_PAY | order #5 Burger SERVED 1/1 $15.00
+  Table 2: #6 Regular sat 84 SEATED
+Staff tasks available:
+  Host:   wait
+  Waiter: order 6 | wait
+  Chef:   wait
+Happy Hour now? 20% off orders this turn and next, waiting customers +15 (once per game) y/n> n
+  Host options: wait
+Host> wait
+  - Host waits this turn.
+  Waiter options: order 6 | wait
+Waiter> order 6
+  - Customer #6 (Regular) orders Pasta: bill $18.00, 2 preparation unit(s).
+  Chef options: cook 6 | wait
+Chef> cook 6
+  - Chef works on order #6 (Pasta): 1/2 units, PREPARING.
+  - Cashier collects $15.00 from Customer #5 (satisfaction 76 recorded). Table 1 is free.
+--- End of turn 18: served 5, unhappy departures 0, revenue $73.50, avg satisfaction 75.6, turns used 18/18
+
+==================== RESULT: VICTORY ====================
+Paid customers:        5 (target 4)
+Revenue:               $73.50 (target $45.00)
+Average satisfaction:  75.6 (target 60)
+Served: 5 | Unhappy departures: 0

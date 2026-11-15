@@ -7,7 +7,8 @@ import java.util.Comparator;
  * full price. Distinct order preference (documented): the Critic ignores the
  * default rule and always orders the most expensive dish on the menu. In the
  * base setting that is Pasta, the slowest dish, so the manager has to give the
- * Critic priority at the table and in the kitchen.
+ * Critic priority at the table and in the kitchen. (Like anyone, a Critic
+ * left hungry upgrades to a combo; see {@link Customer#chooseMenuItem}.)
  */
 public class CriticCustomer extends Customer {
 
@@ -18,7 +19,7 @@ public class CriticCustomer extends Customer {
     }
 
     @Override
-    public MenuItem chooseMenuItem(Menu menu) {
+    protected MenuItem preferredMenuItem(Menu menu) {
         return menu.getItems().stream()
                 .max(Comparator.comparingInt(MenuItem::getPriceCents))
                 .orElseThrow();

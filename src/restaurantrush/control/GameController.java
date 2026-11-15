@@ -7,6 +7,7 @@ import restaurantrush.boundary.GameUI;
 import restaurantrush.entity.Assignable;
 import restaurantrush.entity.GameConfig;
 import restaurantrush.entity.GameResult;
+import restaurantrush.entity.HappyHour;
 import restaurantrush.entity.InvalidActionException;
 import restaurantrush.entity.Objective;
 import restaurantrush.entity.Restaurant;
@@ -56,7 +57,18 @@ public class GameController {
             ui.showMessage(e);
         }
 
-        // Steps 2-3: manager choices. List order = Waiter first, then Chef.
+        // Start of turn: the manager may switch on Happy Hour (once per game);
+        // in each active turn, customers still awaiting service recover
+        HappyHour happyHour = restaurant.getHappyHour();
+        if (happyHour.canActivate() && ui.askHappyHour(turn)) {
+            happyHour.activate();
+            ui.showMessage("Happy Hour is on for this turn and the next: orders taken get 20% off.");
+        }
+        for (String e : turnMgr.processHappyHour()) {
+            ui.showMessage(e);
+        }
+
+        // Steps 2-3: manager choices. List order = Host, then Waiter, then Chef.
         for (Assignable staff : restaurant.getAssignableStaff()) {
             assignTask(staff, turn);
         }
@@ -67,6 +79,7 @@ public class GameController {
         for (String e : events) {
             ui.showMessage(e);
         }
+        happyHour.endTurn();
         ui.showTurnEnd(turn, config.getMaxTurns(), restaurant.getScoreboard());
     }
 

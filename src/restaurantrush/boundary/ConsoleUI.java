@@ -10,6 +10,7 @@ import java.util.StringJoiner;
 import restaurantrush.entity.Assignable;
 import restaurantrush.entity.Customer;
 import restaurantrush.entity.GameResult;
+import restaurantrush.entity.HappyHour;
 import restaurantrush.entity.Money;
 import restaurantrush.entity.Objective;
 import restaurantrush.entity.Order;
@@ -45,10 +46,11 @@ public class ConsoleUI implements GameUI {
     @Override
     public void showTurnStart(int turn, int maxTurns, Restaurant r) {
         if (turn == 1) {
-            out.println("RESTAURANT RUSH  |  Stage 2");
+            out.println("RESTAURANT RUSH  |  Stage 3");
             out.println("Goal after turn " + maxTurns + ": at least 4 paid customers, revenue at least $45.00,");
             out.println("and average satisfaction of paid customers at least 60.");
             out.println("Commands: seat N | order N | serve N | cook N | wait   (N = customer or order number)");
+            out.println("Each turn: Happy Hour y/n (while unused), then Host, Waiter, Chef.");
         }
         Scoreboard s = r.getScoreboard();
         out.println();
@@ -58,6 +60,7 @@ public class ConsoleUI implements GameUI {
                 + " | Paid " + s.getPaidCount()
                 + " | Served " + s.getServedCount()
                 + " | Left unhappy " + s.getUnhappyDepartures());
+        out.println("Happy Hour: " + formatHappyHour(r.getHappyHour()));
 
         StringJoiner queue = new StringJoiner(", ");
         for (Customer c : r.getWaitingQueue().getCustomers()) {
@@ -78,6 +81,29 @@ public class ConsoleUI implements GameUI {
                 tasks.add(formatTask(t));
             }
             out.printf("  %-7s %s%n", staff.getName() + ":", tasks);
+        }
+    }
+
+    @Override
+    public boolean askHappyHour(int turn) {
+        while (true) {
+            out.print("Happy Hour now? 20% off orders this turn and next, waiting customers +"
+                    + HappyHour.RECOVERY + " (once per game) y/n> ");
+            if (!in.hasNextLine()) {
+                out.println("(no more input: n)");
+                return false;
+            }
+            String line = in.nextLine().trim().toLowerCase(Locale.ROOT);
+            if (echoInput) {
+                out.println(line);
+            }
+            if (line.equals("y") || line.equals("yes")) {
+                return true;
+            }
+            if (line.equals("n") || line.equals("no")) {
+                return false;
+            }
+            out.println("  ! Please answer y or n.");
         }
     }
 
@@ -185,6 +211,15 @@ public class ConsoleUI implements GameUI {
             case PREPARE -> "cook " + t.getTargetId();
             case WAIT -> "wait";
         };
+    }
+
+    private String formatHappyHour(HappyHour h) {
+        if (h.isActive()) {
+            return h.getTurnsRemaining() > 1
+                    ? "ACTIVE, " + h.getTurnsRemaining() + " turns left (this turn and the next)"
+                    : "ACTIVE, last turn";
+        }
+        return h.isUsed() ? "used" : "available";
     }
 
     private String formatAverage(Scoreboard s) {

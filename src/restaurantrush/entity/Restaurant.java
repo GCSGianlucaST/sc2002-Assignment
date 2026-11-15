@@ -15,10 +15,12 @@ public class Restaurant {
     private final WaitingQueue waitingQueue = new WaitingQueue();
     private final List<Order> activeOrders = new ArrayList<>();
     private final Menu menu;
+    private final Host host = new Host();
     private final Waiter waiter = new Waiter();
     private final Chef chef = new Chef();
     private final Cashier cashier = new Cashier();
     private final Scoreboard scoreboard = new Scoreboard();
+    private final HappyHour happyHour = new HappyHour();
 
     public Restaurant(GameConfig config) {
         for (int id = 1; id <= config.getTableCount(); id++) {
@@ -29,6 +31,7 @@ public class Restaurant {
 
     /** Lets every staff member act again this turn. */
     public void startTurn() {
+        host.startTurn();
         waiter.startTurn();
         chef.startTurn();
         cashier.startTurn();
@@ -44,6 +47,21 @@ public class Restaurant {
         waitingQueue.remove(c);
         t.seat(c);
         c.seatAt(t);
+    }
+
+    /**
+     * The seating rule shared by every role that seats (Waiter and Host):
+     * the chosen queued customer goes to the lowest-numbered free table.
+     *
+     * @return the table used
+     */
+    public Table seatFromQueue(int customerId) throws InvalidActionException {
+        Customer c = waitingQueue.findById(customerId).orElseThrow(() -> new InvalidActionException(
+                "Customer #" + customerId + " is not in the waiting queue."));
+        Table t = findFreeTable().orElseThrow(() -> new InvalidActionException(
+                "No free table: a table frees up only when its customer pays or leaves."));
+        seat(c, t);
+        return t;
     }
 
     public void addOrder(Order o) {
@@ -87,9 +105,13 @@ public class Restaurant {
         return List.copyOf(activeOrders);
     }
 
-    /** Manager-directed staff in acting order: the Waiter acts before the Chef. */
+    /**
+     * Manager-directed staff in acting order. The Host goes first so the
+     * Waiter can take the order of a customer the Host has just seated; the
+     * Waiter acts before the Chef.
+     */
     public List<Assignable> getAssignableStaff() {
-        return List.of(waiter, chef);
+        return List.of(host, waiter, chef);
     }
 
     public List<Table> getTables() {
@@ -110,5 +132,9 @@ public class Restaurant {
 
     public Scoreboard getScoreboard() {
         return scoreboard;
+    }
+
+    public HappyHour getHappyHour() {
+        return happyHour;
     }
 }

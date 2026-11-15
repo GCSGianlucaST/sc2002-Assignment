@@ -51,13 +51,8 @@ public class Waiter extends Staff implements Assignable {
     }
 
     private String seat(int customerId, Restaurant r) throws InvalidActionException {
-        WaitingQueue q = r.getWaitingQueue();
-        Customer c = q.findById(customerId).orElseThrow(() -> new InvalidActionException(
-                "Customer #" + customerId + " is not in the waiting queue."));
-        Table t = r.findFreeTable().orElseThrow(() -> new InvalidActionException(
-                "No free table: a table frees up only when its customer pays or leaves."));
-        r.seat(c, t);
-        return "Waiter seats Customer #" + c.getId() + " at table " + t.getId() + ".";
+        Table t = r.seatFromQueue(customerId);   // shared with the Host
+        return "Waiter seats Customer #" + customerId + " at table " + t.getId() + ".";
     }
 
     private String takeOrder(int customerId, Restaurant r) throws InvalidActionException {
@@ -70,12 +65,15 @@ public class Waiter extends Staff implements Assignable {
         }
         Menu menu = r.getMenu();
         MenuItem item = c.chooseMenuItem(menu);
-        int bill = c.calculateBillCents(item);
+        // customer's own discount first, then Happy Hour; the bill is locked into the order here
+        HappyHour happyHour = r.getHappyHour();
+        int bill = happyHour.applyDiscount(c.calculateBillCents(item));
         Order o = new Order(c.getId(), c, item, bill);
         c.placeOrder(o);
         r.addOrder(o);
         return "Customer #" + c.getId() + " (" + c.getTypeName() + ") orders " + item.getName()
-                + ": bill " + Money.format(bill) + ", " + item.getPreparationUnits() + " preparation unit(s).";
+                + ": bill " + Money.format(bill) + (happyHour.isActive() ? " (Happy Hour 20% off)" : "")
+                + ", " + item.getPreparationUnits() + " preparation unit(s).";
     }
 
     private String serve(int orderId, Restaurant r, int turn) throws InvalidActionException {
