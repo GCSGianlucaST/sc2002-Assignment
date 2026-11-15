@@ -1,0 +1,56 @@
+@startuml stage1-dependencies-3-other-entities
+title Stage 1 dependencies (3/3): the other entity classes as client (slide 34)\nclient ..> supplier where the supplier is a parameter, return or local type, is created or called,\nor is reached through a getter or lambda (source text + bytecode),\nand no association or inheritance already links them
+set separator none
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype polyline
+skinparam nodesep 18
+skinparam ranksep 160
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam packageStyle rectangle
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #3B4A5A
+  ArrowColor #3B4A5A
+}
+skinparam package {
+  BorderColor #8A97A6
+  FontColor #3B4A5A
+}
+skinparam note {
+  BackgroundColor #FFF6D9
+  BorderColor #C9A227
+}
+skinparam legend {
+  BackgroundColor #F7F9FA
+  BorderColor #8A97A6
+}
+hide empty members
+hide circle
+hide members
+left to right direction
+class ArrivalSchedule <<entity>>
+abstract class "Customer\n{abstract}" as Customer <<entity>>
+class GameConfig <<entity>>
+enum GameResult <<enumeration>>
+class Menu <<entity>>
+class MenuItem <<entity>>
+class Objective <<entity>>
+class RegularCustomer <<entity>>
+class Restaurant <<entity>>
+class Scoreboard <<entity>>
+interface Assignable <<interface>>
+ArrivalSchedule ..> Customer : <<use>>
+Customer ..> Menu : <<use>>
+Customer ..> MenuItem : <<use>>
+GameConfig ..> MenuItem : <<create>>
+GameConfig ..> RegularCustomer : <<create>>
+Objective ..> GameResult : <<use>>
+Objective ..> Scoreboard : <<use>>
+RegularCustomer ..> Menu : <<use>>
+RegularCustomer ..> MenuItem : <<use>>
+Restaurant ..> Assignable : <<use>>
+Restaurant ..> Customer : <<use>>
+Restaurant ..> GameConfig : <<use>>
+@enduml
