@@ -23,11 +23,11 @@ turn sequence, abandonment, payment, victory and defeat), Stage 2 (**VIP** and
 
 | Video Time | Content | Person |
 | --- | --- | --- |
-| 0:00 – 2:11 minutes | Game overview and the three stages | Gianluca |
-| 2:11 – 5:18 minutes | Gameplay demonstration and key outcomes | Kiefer |
-| 5:18 – 8:30 minutes | Class diagrams and evidence of stage changes | Stephanie |
-| 8:30 – 12:25 minutes | Sequence diagram (selected: Stage 3) | Patrick |
-| 12:25 – 14:41 minutes | Individual contributions and key learning | Gianluca |
+| 0:00 – 2:11 | Game overview and the three stages | Gianluca |
+| 2:11 – 5:18 | Gameplay demonstration and key outcomes | Kiefer |
+| 5:18 – 8:30 | Class diagrams and evidence of stage changes | Stephanie |
+| 8:30 – 12:25 | Sequence diagram (selected: Stage 3) | Patrick |
+| 12:25 – 14:41 | Individual contributions and key learning | Gianluca |
 
 | Demo Segments | Timestamp |
 |---|---|
